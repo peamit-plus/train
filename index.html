@@ -110,9 +110,11 @@
         document.getElementById('date').valueAsDate = new Date();
 
         // Set default time to current time without ":"
-        var now = new Date();
-
-        document.getElementById('time').value = now.getHours().toString() + ":" + now.getMinutes().toString();
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        document.getElementById("time").value = `${hours}:${minutes}`;
+    
     </script>
 </body>
 
