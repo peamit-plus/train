@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>חיפוש נסיעה</h1>
+        <div class="row">
+            <div class="form-group col-xs-12 col-md-3">
+                <label for="startStation">תחנת מוצא</label>
+                <select class="form-control" id="startStation">
+                    <option value="1">נווה יעקב צפון</option>
+                    <option value="2">יצחק טובקין</option>
+                    <option value="3">מזל קשת</option>
+                    <option value="4">משה דיין - צפון</option>
+                    <option value="5">חיל האוויר</option>
+                    <option value="6">סיירת דוכיפת</option>
+                    <option value="7">פסגת זאב מרכז</option>
+                    <option value="8">יקותיאל אדם</option>
+                    <option value="9">בית חנינא</option>
+                    <option value="10">שועפאט</option>
+                    <option value="11">א-סהל</option>
+                    <option value="12">גבעת המבתר</option>
+                    <option value="13">גבעת התחמושת</option>
+                    <option value="14">שמעון הצדיק</option>
+                    <option value="15">שבטי ישראל</option>
+                    <option value="16">שער שכם</option>
+                    <option value="17">העירייה</option>
+                    <option value="18">יפו מרכז</option>
+                    <option value="19">הדווידקה</option>
+                    <option value="20">מחנה יהודה</option>
+                    <option value="21">הטורים</option>
+                    <option value="22">התחנה המרכזית</option>
+                    <option value="23">קרית משה</option>
+                    <option value="24">החלוץ</option>
+                    <option value="25">כיכר דניה</option>
+                    <option value="26">יפה נוף</option>
+                    <option value="27">הר הרצל</option>
+                    <option value="28">שמריהו לוין</option>
+                    <option value="29">קרית היובל - מערב</option>
+                    <option value="30">גן המפלצת</option>
+                    <option value="31">הנרייטה סאלד - מזרח</option>
+                    <option value="32">קריית מנחם</option>
+                    <option value="33">צומת אורה</option>
+                    <option value="34">בי"ס לרפואה</option>
+                    <option value="35">הדסה עין כרם</option>
+                </select>
+            </div>
+            <div class="form-group col-xs-12 col-md-3">
+                <label for="endStation">תחנת יעד</label>
+                <select class="form-control" id="endStation">
+                    <option value="1">נווה יעקב צפון</option>
+                    <option value="2">יצחק טובקין</option>
+                    <option value="3">מזל קשת</option>
+                    <option value="4">משה דיין - צפון</option>
+                    <option value="5">חיל האוויר</option>
+                    <option value="6">סיירת דוכיפת</option>
+                    <option value="7">פסגת זאב מרכז</option>
+                    <option value="8">יקותיאל אדם</option>
+                    <option value="9">בית חנינא</option>
+                    <option value="10">שועפאט</option>
+                    <option value="11">א-סהל</option>
+                    <option value="12">גבעת המבתר</option>
+                    <option value="13">גבעת התחמושת</option>
+                    <option value="14">שמעון הצדיק</option>
+                    <option value="15">שבטי ישראל</option>
+                    <option value="16">שער שכם</option>
+                    <option value="17">העירייה</option>
+                    <option value="18">יפו מרכז</option>
+                    <option value="19">הדווידקה</option>
+                    <option value="20">מחנה יהודה</option>
+                    <option value="21">הטורים</option>
+                    <option value="22">התחנה המרכזית</option>
+                    <option value="23">קרית משה</option>
+                    <option value="24">החלוץ</option>
+                    <option value="25">כיכר דניה</option>
+                    <option value="26">יפה נוף</option>
+                    <option value="27">הר הרצל</option>
+                    <option value="28">שמריהו לוין</option>
+                    <option value="29">קרית היובל - מערב</option>
+                    <option value="30">גן המפלצת</option>
+                    <option value="31">הנרייטה סאלד - מזרח</option>
+                    <option value="32">קריית מנחם</option>
+                    <option value="33">צומת אורה</option>
+                    <option value="34">בי"ס לרפואה</option>
+                    <option value="35">הדסה עין כרם</option>
+                </select>
+            </div>
+            <div class="form-group col-xs-12 col-md-3">
+                <label for="date">תאריך</label>
+                <input type="date" class="form-control" id="date" value="">
+            </div>
+            <div class="form-group col-xs-12 col-md-3">
+                <label for="time">שעת יציאה</label>
+                <input type="time" class="form-control" id="time" value="">
+            </div>
+        </div>
+<button class="btn btn-block btn-primary" onclick="search()">חיפוש נסיעות</button>
+
+    </div>
+    <script src="js.js"></script>
+    <script>
+        // Set default date to today
+        document.getElementById('date').valueAsDate = new Date();
+
+        // Set default time to current time without ":"
+        var now = new Date();
+
+        document.getElementById('time').value = now.getHours().toString() + ":" + now.getMinutes().toString();
+    </script>
+</body>
+
+</html>
